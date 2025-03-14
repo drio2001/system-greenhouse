@@ -1,0 +1,168 @@
+\hypertarget{classSensor}{}\doxysection{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classSensor_aa730e9961dd645e9df9644c52b6e72eb}{$\sim$\+Sensor}} ()
+\item 
+virtual void \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{get\+Date}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{print\+Date}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{get\+Name}} () const =0
+\item 
+void \mbox{\hyperlink{classSensor_a263fac310b213d48ccc77ab0fb1ec0d3}{set\+Identificator}} (int identificator)
+\item 
+int \mbox{\hyperlink{classSensor_a7a09dae16008877dc9ae39349b0cb40a}{get\+Identificator}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classSensor_a59271a1989bf352e9b65951e539216b8}{identificator\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Sensor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSensor_aa730e9961dd645e9df9644c52b6e72eb}\label{classSensor_aa730e9961dd645e9df9644c52b6e72eb}} 
+\index{Sensor@{Sensor}!````~Sensor@{$\sim$Sensor}}
+\index{````~Sensor@{$\sim$Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sensor()}{~Sensor()}}
+{\footnotesize\ttfamily virtual Sensor\+::$\sim$\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 8 of file Sensor.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{\}  \textcolor{comment}{// Destructor virtual de la clase}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSensor_ab8f31d54440151ec8d8302be251fb564}\label{classSensor_ab8f31d54440151ec8d8302be251fb564}} 
+\index{Sensor@{Sensor}!getDate@{getDate}}
+\index{getDate@{getDate}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily virtual void Sensor\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classTemp_a5cc217fe4cb7beb380d372afe20faed5}{Temp}}, \mbox{\hyperlink{classMoisture_ae3a71c000d067fe3c8b646ce3f4bf081}{Moisture}}, \mbox{\hyperlink{classLight_a4118ecc61352409cd6e4b65479e90a69}{Light}}, \mbox{\hyperlink{classCamTherm_a9fcccb146d7190cd7d98cd3c54f244cf}{Cam\+Therm}}, \mbox{\hyperlink{classCamRGB_a77a4d4e0a43f80871bde397361bcf766}{Cam\+RGB}}, and \mbox{\hyperlink{classAirQ_af3c5b9a08547ef91627de22b05407d7a}{AirQ}}.
+
+\mbox{\Hypertarget{classSensor_a7a09dae16008877dc9ae39349b0cb40a}\label{classSensor_a7a09dae16008877dc9ae39349b0cb40a}} 
+\index{Sensor@{Sensor}!getIdentificator@{getIdentificator}}
+\index{getIdentificator@{getIdentificator}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getIdentificator()}{getIdentificator()}}
+{\footnotesize\ttfamily int Sensor\+::get\+Identificator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file Sensor.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                \{ }
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \mbox{\hyperlink{classSensor_a59271a1989bf352e9b65951e539216b8}{identificator\_}}; }
+\DoxyCodeLine{18   \} \textcolor{comment}{// Metodo que devuelve el identificador del sensor}}
+
+\end{DoxyCode}
+
+
+References identificator\+\_\+.
+
+\mbox{\Hypertarget{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}\label{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}} 
+\index{Sensor@{Sensor}!getName@{getName}}
+\index{getName@{getName}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Sensor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classTemp_a0dc8777549e6e5024eb5d68076ca8257}{Temp}}, \mbox{\hyperlink{classMoisture_a52d4832d4efe49faa5ecf87007767e53}{Moisture}}, \mbox{\hyperlink{classLight_a7742dbea1b40c5ee04c954abca6e6c30}{Light}}, \mbox{\hyperlink{classCamTherm_a764db7be46d5e95e1d5f86108709238b}{Cam\+Therm}}, \mbox{\hyperlink{classCamRGB_ae1ec92adf8dbc8ac2426ab1725bcc05c}{Cam\+RGB}}, and \mbox{\hyperlink{classAirQ_a95c510cee63bc897fa7794e1407997a5}{AirQ}}.
+
+\mbox{\Hypertarget{classSensor_a669fe6532e962d45680ef60f8b3eaf32}\label{classSensor_a669fe6532e962d45680ef60f8b3eaf32}} 
+\index{Sensor@{Sensor}!printDate@{printDate}}
+\index{printDate@{printDate}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily virtual void Sensor\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classTemp_a558419f50c591a4d0fa208cb77a614d4}{Temp}}, \mbox{\hyperlink{classMoisture_a3a737eabe58dc4e586ff8602645f701e}{Moisture}}, \mbox{\hyperlink{classLight_ae9b8eaff1aaef33da73d7ae1ad0048e7}{Light}}, \mbox{\hyperlink{classCamTherm_a964ab380900eec8198a56eeec715abd3}{Cam\+Therm}}, \mbox{\hyperlink{classCamRGB_a9d0c4c55c5480389962ffdcd1323e1a6}{Cam\+RGB}}, and \mbox{\hyperlink{classAirQ_a83b1c0cd5a7b918558a373f0a621bb24}{AirQ}}.
+
+\mbox{\Hypertarget{classSensor_a263fac310b213d48ccc77ab0fb1ec0d3}\label{classSensor_a263fac310b213d48ccc77ab0fb1ec0d3}} 
+\index{Sensor@{Sensor}!setIdentificator@{setIdentificator}}
+\index{setIdentificator@{setIdentificator}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{setIdentificator()}{setIdentificator()}}
+{\footnotesize\ttfamily void Sensor\+::set\+Identificator (\begin{DoxyParamCaption}\item[{int}]{identificator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 13 of file Sensor.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                            \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{classSensor_a59271a1989bf352e9b65951e539216b8}{identificator\_}} = identificator; }
+\DoxyCodeLine{15   \}  \textcolor{comment}{// Metodo para establecer el identificador del sensor}}
+
+\end{DoxyCode}
+
+
+References identificator\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSensor_a59271a1989bf352e9b65951e539216b8}\label{classSensor_a59271a1989bf352e9b65951e539216b8}} 
+\index{Sensor@{Sensor}!identificator\_@{identificator\_}}
+\index{identificator\_@{identificator\_}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{identificator\_}{identificator\_}}
+{\footnotesize\ttfamily int Sensor\+::identificator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file Sensor.\+h.
+
+
+
+Referenced by get\+Identificator(), and set\+Identificator().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Sensor_8h}{Sensor.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,226 @@
+\hypertarget{classUser}{}\doxysection{User Class Reference}
+\label{classUser}\index{User@{User}}
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+
+
+Inheritance diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classUser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classUser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a604d806264eedbdfdaf68eb0e8d2db37}{User}} (const std\+::string \&\mbox{\hyperlink{classUser_a290593888be78ccd4214e99c8ee43b4e}{id}}, const std\+::string \&\mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}})
+\item 
+virtual \mbox{\hyperlink{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}{$\sim$\+User}} ()
+\item 
+std\+::string \mbox{\hyperlink{classUser_aa36207a7cead4fda23017d44c5ad4ad3}{get\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{classUser_a45b909a4f4e6b56cb00a5c6dae251a9a}{get\+Nif}} () const
+\item 
+void \mbox{\hyperlink{classUser_a46ce8603a5e8d106dd03e2198c8114c2}{set\+Nif}} (const std\+::string \&new\+Nif)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classUser_a290593888be78ccd4214e99c8ee43b4e}{id}}
+\item 
+std\+::string \mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file User.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUser_a604d806264eedbdfdaf68eb0e8d2db37}\label{classUser_a604d806264eedbdfdaf68eb0e8d2db37}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const std\+::string \&}]{nif }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file User.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5     : \mbox{\hyperlink{classUser_a290593888be78ccd4214e99c8ee43b4e}{id}}(\textcolor{keywordtype}{id}), \mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}}(\mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}})  \textcolor{comment}{// Se inicializan los atributos id y nif con los parametros proporcionados}}
+\DoxyCodeLine{6 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}\label{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}} 
+\index{User@{User}!````~User@{$\sim$User}}
+\index{````~User@{$\sim$User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{$\sim$User()}{~User()}}
+{\footnotesize\ttfamily User\+::$\sim$\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 8 of file User.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUser_aa36207a7cead4fda23017d44c5ad4ad3}\label{classUser_aa36207a7cead4fda23017d44c5ad4ad3}} 
+\index{User@{User}!getId@{getId}}
+\index{getId@{getId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 11 of file User.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                             \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUser_a290593888be78ccd4214e99c8ee43b4e}{id}};  \textcolor{comment}{// Devuelve el atributo identificador del usuario}}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+
+
+References id.
+
+
+
+Referenced by Dashboard\+::login().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUser_aa36207a7cead4fda23017d44c5ad4ad3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUser_a45b909a4f4e6b56cb00a5c6dae251a9a}\label{classUser_a45b909a4f4e6b56cb00a5c6dae251a9a}} 
+\index{User@{User}!getNif@{getNif}}
+\index{getNif@{getNif}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getNif()}{getNif()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+Nif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 15 of file User.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                              \{}
+\DoxyCodeLine{16     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}}; \textcolor{comment}{// Devuelve el atributo identificador del usuario}}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+
+
+References nif.
+
+
+
+Referenced by Dashboard\+::login().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUser_a45b909a4f4e6b56cb00a5c6dae251a9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUser_a46ce8603a5e8d106dd03e2198c8114c2}\label{classUser_a46ce8603a5e8d106dd03e2198c8114c2}} 
+\index{User@{User}!setNif@{setNif}}
+\index{setNif@{setNif}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setNif()}{setNif()}}
+{\footnotesize\ttfamily void User\+::set\+Nif (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Nif }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file User.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                          \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{classUser_abdedab75d016f7c442ba2c8b89c8a454}{nif}} = newNif;   \textcolor{comment}{// Cambia el atributo nif con el nuevo Nif proporcionado al usuario}}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+References nif.
+
+
+
+Referenced by DBUser\+::edit\+User().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUser_a46ce8603a5e8d106dd03e2198c8114c2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUser_a290593888be78ccd4214e99c8ee43b4e}\label{classUser_a290593888be78ccd4214e99c8ee43b4e}} 
+\index{User@{User}!id@{id}}
+\index{id@{id}!User@{User}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::string User\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file User.\+h.
+
+
+
+Referenced by get\+Id().
+
+\mbox{\Hypertarget{classUser_abdedab75d016f7c442ba2c8b89c8a454}\label{classUser_abdedab75d016f7c442ba2c8b89c8a454}} 
+\index{User@{User}!nif@{nif}}
+\index{nif@{nif}!User@{User}}
+\doxysubsubsection{\texorpdfstring{nif}{nif}}
+{\footnotesize\ttfamily std\+::string User\+::nif\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 18 of file User.\+h.
+
+
+
+Referenced by get\+Nif(), and set\+Nif().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{User_8h}{User.\+h}}\item 
+\mbox{\hyperlink{User_8cpp}{User.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{classCamTherm}{}\doxysection{Cam\+Therm Class Reference}
+\label{classCamTherm}\index{CamTherm@{CamTherm}}
+
+
+{\ttfamily \#include $<$Cam\+Therm.\+h$>$}
+
+
+
+Inheritance diagram for Cam\+Therm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classCamTherm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cam\+Therm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classCamTherm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCamTherm_a9fcccb146d7190cd7d98cd3c54f244cf}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classCamTherm_a964ab380900eec8198a56eeec715abd3}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classCamTherm_a764db7be46d5e95e1d5f86108709238b}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCamTherm_a4219fa11b9993d844bda6989677a4870}{date\+\_\+}} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Cam\+Therm.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCamTherm_a9fcccb146d7190cd7d98cd3c54f244cf}\label{classCamTherm_a9fcccb146d7190cd7d98cd3c54f244cf}} 
+\index{CamTherm@{CamTherm}!getDate@{getDate}}
+\index{getDate@{getDate}!CamTherm@{CamTherm}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Cam\+Therm\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 7 of file Cam\+Therm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9   \textcolor{comment}{// Devuelve el atributo con los datos (matriz 3x3 de números aleatorios)}}
+\DoxyCodeLine{10   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; ++i) \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 3; ++j) \{}
+\DoxyCodeLine{12       \mbox{\hyperlink{classCamTherm_a4219fa11b9993d844bda6989677a4870}{date\_}}[i][j] = rand() \% 100;}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14   \}}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classCamTherm_a764db7be46d5e95e1d5f86108709238b}\label{classCamTherm_a764db7be46d5e95e1d5f86108709238b}} 
+\index{CamTherm@{CamTherm}!getName@{getName}}
+\index{getName@{getName}!CamTherm@{CamTherm}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Cam\+Therm\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 31 of file Cam\+Therm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Cámara térmica"{}};}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCamTherm_a964ab380900eec8198a56eeec715abd3}\label{classCamTherm_a964ab380900eec8198a56eeec715abd3}} 
+\index{CamTherm@{CamTherm}!printDate@{printDate}}
+\index{printDate@{printDate}!CamTherm@{CamTherm}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Cam\+Therm\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 18 of file Cam\+Therm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20   \textcolor{comment}{// Imprime el atributo con los datos del sensor}}
+\DoxyCodeLine{21   std::cout << \textcolor{stringliteral}{"{}Datos cámara térmica:"{}} << std::endl;}
+\DoxyCodeLine{22   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; ++i) \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 3; ++j) \{}
+\DoxyCodeLine{24       std::cout << \mbox{\hyperlink{classCamTherm_a4219fa11b9993d844bda6989677a4870}{date\_}}[i][j] << \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26     std::cout << std::endl;}
+\DoxyCodeLine{27   \}}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCamTherm_a4219fa11b9993d844bda6989677a4870}\label{classCamTherm_a4219fa11b9993d844bda6989677a4870}} 
+\index{CamTherm@{CamTherm}!date\_@{date\_}}
+\index{date\_@{date\_}!CamTherm@{CamTherm}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Cam\+Therm\+::date\+\_\+\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Cam\+Therm.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{CamTherm_8h}{Cam\+Therm.\+h}}\item 
+\mbox{\hyperlink{CamTherm_8cpp}{Cam\+Therm.\+cpp}}\end{DoxyCompactItemize}

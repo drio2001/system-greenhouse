@@ -1,0 +1,17 @@
+<map id="Dashboard::login" name="Dashboard::login">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,137,285"/>
+<area shape="rect" id="node2" href="$classDashboard.html#aafdaa350902eb502afe9c669ed75a0d8" title=" " alt="" coords="185,107,383,133"/>
+<area shape="rect" id="node8" href="$classDBUser.html#a3f5df9934ddad8a4f32177a9ce7bdf92" title=" " alt="" coords="703,259,836,285"/>
+<area shape="rect" id="node12" href="$classUser.html#aa36207a7cead4fda23017d44c5ad4ad3" title=" " alt="" coords="237,309,331,336"/>
+<area shape="rect" id="node13" href="$classUser.html#a45b909a4f4e6b56cb00a5c6dae251a9a" title=" " alt="" coords="234,360,334,387"/>
+<area shape="rect" id="node14" href="$classDBUser.html#a132ce028989581dbe5b814dd2c579058" title=" " alt="" coords="212,208,356,235"/>
+<area shape="rect" id="node3" href="$classDashboard.html#ae3b3c35e0763b2bd55c91b25ccd25dac" title=" " alt="" coords="431,107,640,133"/>
+<area shape="rect" id="node11" href="$classDashboard.html#a900d830c8c1ba884931dcb53b935cd52" title=" " alt="" coords="436,56,635,83"/>
+<area shape="rect" id="node4" href="$classDBUser.html#a79ae2fe5268cae3d27c2c55551331a2b" title=" " alt="" coords="703,208,836,235"/>
+<area shape="rect" id="node5" href="$classDBUser.html#ab2f0603805560b479b4f0ee3cc3b4250" title=" " alt="" coords="688,107,851,133"/>
+<area shape="rect" id="node6" href="$classDBUser.html#ac0d39426ba387de6ef6c5f474b825f5d" title=" " alt="" coords="702,157,837,184"/>
+<area shape="rect" id="node9" href="$classDBUser.html#a726571e85d958ec18abac59e9fe32297" title=" " alt="" coords="690,5,849,32"/>
+<area shape="rect" id="node10" href="$classDBUser.html#a1fe8a4b6e1657d1a2ba076edde6f7110" title=" " alt="" coords="696,56,843,83"/>
+<area shape="rect" id="node7" href="$classUser.html#a46ce8603a5e8d106dd03e2198c8114c2" title=" " alt="" coords="899,157,997,184"/>
+<area shape="rect" id="node15" href="$classDBUser.html#a191530eb5b9dc457ccd0a61e02b6306f" title=" " alt="" coords="463,157,608,184"/>
+</map>

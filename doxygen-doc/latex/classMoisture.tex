@@ -1,0 +1,145 @@
+\hypertarget{classMoisture}{}\doxysection{Moisture Class Reference}
+\label{classMoisture}\index{Moisture@{Moisture}}
+
+
+{\ttfamily \#include $<$Moisture.\+h$>$}
+
+
+
+Inheritance diagram for Moisture\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classMoisture__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Moisture\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classMoisture__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMoisture_ae3a71c000d067fe3c8b646ce3f4bf081}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classMoisture_a3a737eabe58dc4e586ff8602645f701e}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classMoisture_a52d4832d4efe49faa5ecf87007767e53}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMoisture_a6a862272b80971bf74ad9fe84079ee67}{date\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Moisture.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMoisture_ae3a71c000d067fe3c8b646ce3f4bf081}\label{classMoisture_ae3a71c000d067fe3c8b646ce3f4bf081}} 
+\index{Moisture@{Moisture}!getDate@{getDate}}
+\index{getDate@{getDate}!Moisture@{Moisture}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Moisture\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 8 of file Moisture.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10   \textcolor{comment}{// Devuelve el atributo con los datos (número aleatorio entre 0 y 100) del sensor}}
+\DoxyCodeLine{11   \mbox{\hyperlink{classMoisture_a6a862272b80971bf74ad9fe84079ee67}{date\_}} = rand() \% 101;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classMoisture_a52d4832d4efe49faa5ecf87007767e53}\label{classMoisture_a52d4832d4efe49faa5ecf87007767e53}} 
+\index{Moisture@{Moisture}!getName@{getName}}
+\index{getName@{getName}!Moisture@{Moisture}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Moisture\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 21 of file Moisture.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Sensor de humedad:"{}};}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMoisture_a3a737eabe58dc4e586ff8602645f701e}\label{classMoisture_a3a737eabe58dc4e586ff8602645f701e}} 
+\index{Moisture@{Moisture}!printDate@{printDate}}
+\index{printDate@{printDate}!Moisture@{Moisture}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Moisture\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 15 of file Moisture.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17   std::cout << \textcolor{stringliteral}{"{}Datos de la humedad: "{}} << \mbox{\hyperlink{classMoisture_a6a862272b80971bf74ad9fe84079ee67}{date\_}} << std::endl;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMoisture_a6a862272b80971bf74ad9fe84079ee67}\label{classMoisture_a6a862272b80971bf74ad9fe84079ee67}} 
+\index{Moisture@{Moisture}!date\_@{date\_}}
+\index{date\_@{date\_}!Moisture@{Moisture}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Moisture\+::date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Moisture.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Moisture_8h}{Moisture.\+h}}\item 
+\mbox{\hyperlink{Moisture_8cpp}{Moisture.\+cpp}}\end{DoxyCompactItemize}

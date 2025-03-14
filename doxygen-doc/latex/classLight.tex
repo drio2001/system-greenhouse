@@ -1,0 +1,145 @@
+\hypertarget{classLight}{}\doxysection{Light Class Reference}
+\label{classLight}\index{Light@{Light}}
+
+
+{\ttfamily \#include $<$Light.\+h$>$}
+
+
+
+Inheritance diagram for Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classLight__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classLight__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLight_a4118ecc61352409cd6e4b65479e90a69}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classLight_ae9b8eaff1aaef33da73d7ae1ad0048e7}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classLight_a7742dbea1b40c5ee04c954abca6e6c30}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classLight_a2cdac786304bdc300b5f7e3459d62c3a}{date\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Light.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLight_a4118ecc61352409cd6e4b65479e90a69}\label{classLight_a4118ecc61352409cd6e4b65479e90a69}} 
+\index{Light@{Light}!getDate@{getDate}}
+\index{getDate@{getDate}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Light\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 8 of file Light.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// Devuelve el atributo con los datos (número aleatorio entre 0 y 100) del sensor}}
+\DoxyCodeLine{11     \mbox{\hyperlink{classLight_a2cdac786304bdc300b5f7e3459d62c3a}{date\_}} = rand() \% 101;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classLight_a7742dbea1b40c5ee04c954abca6e6c30}\label{classLight_a7742dbea1b40c5ee04c954abca6e6c30}} 
+\index{Light@{Light}!getName@{getName}}
+\index{getName@{getName}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Light\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 21 of file Light.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Sensor de iluminación:"{}};}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLight_ae9b8eaff1aaef33da73d7ae1ad0048e7}\label{classLight_ae9b8eaff1aaef33da73d7ae1ad0048e7}} 
+\index{Light@{Light}!printDate@{printDate}}
+\index{printDate@{printDate}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Light\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 15 of file Light.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     std::cout << \textcolor{stringliteral}{"{}Datos de la iluminación: "{}} << \mbox{\hyperlink{classLight_a2cdac786304bdc300b5f7e3459d62c3a}{date\_}} << std::endl;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLight_a2cdac786304bdc300b5f7e3459d62c3a}\label{classLight_a2cdac786304bdc300b5f7e3459d62c3a}} 
+\index{Light@{Light}!date\_@{date\_}}
+\index{date\_@{date\_}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Light\+::date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Light.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Light_8h}{Light.\+h}}\item 
+\mbox{\hyperlink{Light_8cpp}{Light.\+cpp}}\end{DoxyCompactItemize}

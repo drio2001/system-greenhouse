@@ -1,0 +1,147 @@
+\hypertarget{classAirQ}{}\doxysection{AirQ Class Reference}
+\label{classAirQ}\index{AirQ@{AirQ}}
+
+
+{\ttfamily \#include $<$Air\+Q.\+h$>$}
+
+
+
+Inheritance diagram for AirQ\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classAirQ__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AirQ\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classAirQ__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAirQ_af3c5b9a08547ef91627de22b05407d7a}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classAirQ_a83b1c0cd5a7b918558a373f0a621bb24}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classAirQ_a95c510cee63bc897fa7794e1407997a5}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classAirQ_afb961c7ab56a190ebb9402fa8dfa573c}{date\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Air\+Q.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAirQ_af3c5b9a08547ef91627de22b05407d7a}\label{classAirQ_af3c5b9a08547ef91627de22b05407d7a}} 
+\index{AirQ@{AirQ}!getDate@{getDate}}
+\index{getDate@{getDate}!AirQ@{AirQ}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Air\+Q\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 7 of file Air\+Q.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9   \textcolor{comment}{// Devuelve el atributo con los datos (número aleatorio entre 0 y 100) del sensor}}
+\DoxyCodeLine{10   \mbox{\hyperlink{classAirQ_afb961c7ab56a190ebb9402fa8dfa573c}{date\_}} = rand() \% 101;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classAirQ_a95c510cee63bc897fa7794e1407997a5}\label{classAirQ_a95c510cee63bc897fa7794e1407997a5}} 
+\index{AirQ@{AirQ}!getName@{getName}}
+\index{getName@{getName}!AirQ@{AirQ}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Air\+Q\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 21 of file Air\+Q.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{comment}{// Devuelve el nombre del sensor}}
+\DoxyCodeLine{24   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Sensor calidad del aire:"{}};}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classAirQ_a83b1c0cd5a7b918558a373f0a621bb24}\label{classAirQ_a83b1c0cd5a7b918558a373f0a621bb24}} 
+\index{AirQ@{AirQ}!printDate@{printDate}}
+\index{printDate@{printDate}!AirQ@{AirQ}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Air\+Q\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 14 of file Air\+Q.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16   \textcolor{comment}{// Imprime el atributo con los datos del sensor}}
+\DoxyCodeLine{17   std::cout << \textcolor{stringliteral}{"{}Datos de la calidad del aire: "{}} << \mbox{\hyperlink{classAirQ_afb961c7ab56a190ebb9402fa8dfa573c}{date\_}} << std::endl;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAirQ_afb961c7ab56a190ebb9402fa8dfa573c}\label{classAirQ_afb961c7ab56a190ebb9402fa8dfa573c}} 
+\index{AirQ@{AirQ}!date\_@{date\_}}
+\index{date\_@{date\_}!AirQ@{AirQ}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Air\+Q\+::date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Air\+Q.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{AirQ_8h}{Air\+Q.\+h}}\item 
+\mbox{\hyperlink{AirQ_8cpp}{Air\+Q.\+cpp}}\end{DoxyCompactItemize}

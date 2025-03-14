@@ -1,0 +1,423 @@
+\hypertarget{classDBUser}{}\doxysection{DBUser Class Reference}
+\label{classDBUser}\index{DBUser@{DBUser}}
+
+
+{\ttfamily \#include $<$DBUser.\+h$>$}
+
+
+
+Collaboration diagram for DBUser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classDBUser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDBUser_a4fbd51f5e98bdef0ebf5d183c1e4402f}{DBUser}} ()
+\item 
+void \mbox{\hyperlink{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b}{add\+User}} (\mbox{\hyperlink{classUser}{User}} $\ast$user)
+\item 
+void \mbox{\hyperlink{classDBUser_a191530eb5b9dc457ccd0a61e02b6306f}{add\+Admin}} (\mbox{\hyperlink{classAdmin}{Admin}} $\ast$admin)
+\item 
+void \mbox{\hyperlink{classDBUser_a726571e85d958ec18abac59e9fe32297}{remove\+User}} (\mbox{\hyperlink{classUser}{User}} $\ast$user)
+\item 
+void \mbox{\hyperlink{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d}{edit\+User}} (\mbox{\hyperlink{classUser}{User}} $\ast$user, std\+::string new\+Nif)
+\item 
+\mbox{\hyperlink{classUser}{User}} $\ast$ \mbox{\hyperlink{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}{find\+User}} (std\+::string id)
+\item 
+void \mbox{\hyperlink{classDBUser_ab2f0603805560b479b4f0ee3cc3b4250}{display\+Users}} ()
+\item 
+void \mbox{\hyperlink{classDBUser_a1fe8a4b6e1657d1a2ba076edde6f7110}{save\+Users}} () const
+\item 
+void \mbox{\hyperlink{classDBUser_a132ce028989581dbe5b814dd2c579058}{load\+Users}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ \mbox{\hyperlink{classUser}{User}} $\ast$ $>$ \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file DBUser.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDBUser_a4fbd51f5e98bdef0ebf5d183c1e4402f}\label{classDBUser_a4fbd51f5e98bdef0ebf5d183c1e4402f}} 
+\index{DBUser@{DBUser}!DBUser@{DBUser}}
+\index{DBUser@{DBUser}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{DBUser()}{DBUser()}}
+{\footnotesize\ttfamily DBUser\+::\+DBUser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDBUser_a191530eb5b9dc457ccd0a61e02b6306f}\label{classDBUser_a191530eb5b9dc457ccd0a61e02b6306f}} 
+\index{DBUser@{DBUser}!addAdmin@{addAdmin}}
+\index{addAdmin@{addAdmin}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{addAdmin()}{addAdmin()}}
+{\footnotesize\ttfamily void DBUser\+::add\+Admin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAdmin}{Admin}} $\ast$}]{admin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}.insert(admin);}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by load\+Users().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a191530eb5b9dc457ccd0a61e02b6306f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b}\label{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b}} 
+\index{DBUser@{DBUser}!addUser@{addUser}}
+\index{addUser@{addUser}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily void DBUser\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}} $\ast$}]{user }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}.insert(user);}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users(), and load\+Users().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_ab2f0603805560b479b4f0ee3cc3b4250}\label{classDBUser_ab2f0603805560b479b4f0ee3cc3b4250}} 
+\index{DBUser@{DBUser}!displayUsers@{displayUsers}}
+\index{displayUsers@{displayUsers}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{displayUsers()}{displayUsers()}}
+{\footnotesize\ttfamily void DBUser\+::display\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& user : \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}) \{}
+\DoxyCodeLine{47         std::cout << \textcolor{stringliteral}{"{}ID: "{}} << user-\/>getId() << \textcolor{stringliteral}{"{}, NIF: "{}} << user-\/>getNif() << std::endl;}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_ab2f0603805560b479b4f0ee3cc3b4250_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d}\label{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d}} 
+\index{DBUser@{DBUser}!editUser@{editUser}}
+\index{editUser@{editUser}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{editUser()}{editUser()}}
+{\footnotesize\ttfamily void DBUser\+::edit\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}} $\ast$}]{user,  }\item[{std\+::string}]{new\+Nif }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     user-\/>\mbox{\hyperlink{classUser_a46ce8603a5e8d106dd03e2198c8114c2}{setNif}}(newNif);}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+
+
+References User\+::set\+Nif().
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}\label{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}} 
+\index{DBUser@{DBUser}!findUser@{findUser}}
+\index{findUser@{findUser}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{findUser()}{findUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUser}{User}} $\ast$ DBUser\+::find\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& user : \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}) \{  \textcolor{comment}{// Recorre todos los elementos del conjunto users (base de datos) con los usuarios}}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (user-\/>getId() == \textcolor{keywordtype}{id}) \{  \textcolor{comment}{// Comprueba si el usuario de la iteracion tiene el mismo identificador que el proporcionado}}
+\DoxyCodeLine{37             \textcolor{keywordflow}{return} user;    \textcolor{comment}{// Si tiene el mismo identificador, devuelve el puntero al usuario, sino, continua buscando}}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr}; \textcolor{comment}{// Si no se encuentra ningun usuario con el mismo identificador, se evuelve un puntero a nullptr}}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users(), and Dashboard\+::login().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_a132ce028989581dbe5b814dd2c579058}\label{classDBUser_a132ce028989581dbe5b814dd2c579058}} 
+\index{DBUser@{DBUser}!loadUsers@{loadUsers}}
+\index{loadUsers@{loadUsers}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{loadUsers()}{loadUsers()}}
+{\footnotesize\ttfamily void DBUser\+::load\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                   \{}
+\DoxyCodeLine{75     std::ifstream file(\textcolor{stringliteral}{"{}users.dat"{}});}
+\DoxyCodeLine{76     \textcolor{keywordflow}{if} (file.is\_open()) \{}
+\DoxyCodeLine{77         \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}.clear();}
+\DoxyCodeLine{78         std::string line;}
+\DoxyCodeLine{79         \textcolor{keywordflow}{while} (std::getline(file, line)) \{}
+\DoxyCodeLine{80             std::istringstream iss(line);}
+\DoxyCodeLine{81             std::string id, nif, type;}
+\DoxyCodeLine{82             \textcolor{keywordflow}{if} (std::getline(iss, \textcolor{keywordtype}{id}, \textcolor{charliteral}{','}) \&\&}
+\DoxyCodeLine{83                 std::getline(iss, nif, \textcolor{charliteral}{','}) \&\&}
+\DoxyCodeLine{84                 std::getline(iss, type)) \{}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{86                     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}U"{}}) \{}
+\DoxyCodeLine{87                         \mbox{\hyperlink{classUser}{User}}* user = \textcolor{keyword}{new} \mbox{\hyperlink{classUser}{User}}(\textcolor{keywordtype}{id}, nif);}
+\DoxyCodeLine{88                         \mbox{\hyperlink{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b}{addUser}}(user);}
+\DoxyCodeLine{89                     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}A"{}}) \{}
+\DoxyCodeLine{90                         \mbox{\hyperlink{classAdmin}{Admin}}* admin = \textcolor{keyword}{new} \mbox{\hyperlink{classAdmin}{Admin}}(\textcolor{keywordtype}{id}, nif);}
+\DoxyCodeLine{91                         \mbox{\hyperlink{classDBUser_a191530eb5b9dc457ccd0a61e02b6306f}{addAdmin}}(admin);}
+\DoxyCodeLine{92                     \}}
+\DoxyCodeLine{93                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::bad\_alloc\& e) \{}
+\DoxyCodeLine{94                     \textcolor{comment}{// Manejo de falta de memoria}}
+\DoxyCodeLine{95                     std::cout << \textcolor{stringliteral}{"{}Error: No se pudo asignar memoria para crear un usuario"{}} << std::endl;}
+\DoxyCodeLine{96                 \}}
+\DoxyCodeLine{97             \}}
+\DoxyCodeLine{98         \}}
+\DoxyCodeLine{99         file.close();}
+\DoxyCodeLine{100         std::cout << \textcolor{stringliteral}{"{}Usuarios cargados desde el fichero"{}} << std::endl;}
+\DoxyCodeLine{101     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{102         std::cout << \textcolor{stringliteral}{"{}No se pudo abrir el fichero"{}} << std::endl;}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+
+
+References add\+Admin(), add\+User(), and users.
+
+
+
+Referenced by Dashboard\+::login().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classDBUser_a132ce028989581dbe5b814dd2c579058_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a132ce028989581dbe5b814dd2c579058_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_a726571e85d958ec18abac59e9fe32297}\label{classDBUser_a726571e85d958ec18abac59e9fe32297}} 
+\index{DBUser@{DBUser}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}}
+{\footnotesize\ttfamily void DBUser\+::remove\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}} $\ast$}]{user }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}.erase(user);}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a726571e85d958ec18abac59e9fe32297_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDBUser_a1fe8a4b6e1657d1a2ba076edde6f7110}\label{classDBUser_a1fe8a4b6e1657d1a2ba076edde6f7110}} 
+\index{DBUser@{DBUser}!saveUsers@{saveUsers}}
+\index{saveUsers@{saveUsers}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{saveUsers()}{saveUsers()}}
+{\footnotesize\ttfamily void DBUser\+::save\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 53 of file DBUser.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                         \{}
+\DoxyCodeLine{54     std::ofstream file(\textcolor{stringliteral}{"{}users.dat"{}});}
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (file.is\_open()) \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& user : \mbox{\hyperlink{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}{users}}) \{}
+\DoxyCodeLine{57             file << user-\/>getId() << \textcolor{stringliteral}{"{},"{}} << user-\/>getNif();}
+\DoxyCodeLine{58             \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classAdmin}{Admin}}*\textcolor{keyword}{>}(user) != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{59                 file << \textcolor{stringliteral}{"{},A"{}};}
+\DoxyCodeLine{60             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{61                 file << \textcolor{stringliteral}{"{},U"{}};}
+\DoxyCodeLine{62             \}}
+\DoxyCodeLine{63             file << std::endl;}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         file.close();}
+\DoxyCodeLine{66         std::cout << \textcolor{stringliteral}{"{}Usuarios guardados en el fichero"{}} << std::endl;}
+\DoxyCodeLine{67     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}No se pudo abrir el fichero"{}});}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 \}  }
+
+\end{DoxyCode}
+
+
+References users.
+
+
+
+Referenced by Dashboard\+::display\+Edit\+Users().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDBUser_a1fe8a4b6e1657d1a2ba076edde6f7110_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}\label{classDBUser_a8c0c1189bd083ca1051f985db5ab70bf}} 
+\index{DBUser@{DBUser}!users@{users}}
+\index{users@{users}!DBUser@{DBUser}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{classUser}{User}}$\ast$$>$ DBUser\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file DBUser.\+h.
+
+
+
+Referenced by add\+Admin(), add\+User(), display\+Users(), find\+User(), load\+Users(), remove\+User(), and save\+Users().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{DBUser_8h}{DBUser.\+h}}\item 
+\mbox{\hyperlink{DBUser_8cpp}{DBUser.\+cpp}}\end{DoxyCompactItemize}

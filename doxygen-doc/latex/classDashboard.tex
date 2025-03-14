@@ -1,0 +1,488 @@
+\hypertarget{classDashboard}{}\doxysection{Dashboard Class Reference}
+\label{classDashboard}\index{Dashboard@{Dashboard}}
+
+
+{\ttfamily \#include $<$Dashboard.\+h$>$}
+
+
+
+Collaboration diagram for Dashboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classDashboard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDashboard_ac3ca1a75288b06929db55f223a57dc67}{initialize\+Sensors}} ()
+\item 
+void \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{add\+Sensor}} (\mbox{\hyperlink{classSensor}{Sensor}} $\ast$sensor)
+\item 
+void \mbox{\hyperlink{classDashboard_a5009fc728930fab32704fef909c94215}{login}} (\mbox{\hyperlink{classDBUser}{DBUser}} \&db)
+\item 
+void \mbox{\hyperlink{classDashboard_aafdaa350902eb502afe9c669ed75a0d8}{display\+Options}} (\mbox{\hyperlink{classDBUser}{DBUser}} \&db, \mbox{\hyperlink{classUser}{User}} $\ast$current\+User)
+\item 
+void \mbox{\hyperlink{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac}{display\+Edit\+Users}} (\mbox{\hyperlink{classDBUser}{DBUser}} \&db)
+\item 
+void \mbox{\hyperlink{classDashboard_a900d830c8c1ba884931dcb53b935cd52}{display\+Sensors}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classSensor}{Sensor}} $\ast$ $>$ \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Dashboard.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDashboard_a9433ba134a284f605bd66b0267937e24}\label{classDashboard_a9433ba134a284f605bd66b0267937e24}} 
+\index{Dashboard@{Dashboard}!addSensor@{addSensor}}
+\index{addSensor@{addSensor}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{addSensor()}{addSensor()}}
+{\footnotesize\ttfamily void Dashboard\+::add\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSensor}{Sensor}} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38   \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}.push\_back(sensor);;}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+References sensors\+\_\+.
+
+
+
+Referenced by initialize\+Sensors().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_a9433ba134a284f605bd66b0267937e24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac}\label{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac}} 
+\index{Dashboard@{Dashboard}!displayEditUsers@{displayEditUsers}}
+\index{displayEditUsers@{displayEditUsers}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{displayEditUsers()}{displayEditUsers()}}
+{\footnotesize\ttfamily void Dashboard\+::display\+Edit\+Users (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDBUser}{DBUser}} \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                       \{}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} option;}
+\DoxyCodeLine{118     \textcolor{keywordtype}{bool} exit = \textcolor{keyword}{false};}
+\DoxyCodeLine{119     }
+\DoxyCodeLine{120     \textcolor{keywordflow}{while} (!exit) \{}
+\DoxyCodeLine{121         }
+\DoxyCodeLine{122         std::cout << \textcolor{stringliteral}{"{}Opciones de edición de usuarios:"{}} << std::endl;}
+\DoxyCodeLine{123         std::cout << \textcolor{stringliteral}{"{}1. Mostrar usuarios"{}} << std::endl;}
+\DoxyCodeLine{124         std::cout << \textcolor{stringliteral}{"{}2. Añadir usuario"{}} << std::endl;}
+\DoxyCodeLine{125         std::cout << \textcolor{stringliteral}{"{}3. Eliminar usuario"{}} << std::endl;}
+\DoxyCodeLine{126         std::cout << \textcolor{stringliteral}{"{}4. Editar usuario"{}} << std::endl;}
+\DoxyCodeLine{127         std::cout << \textcolor{stringliteral}{"{}5. Guardar cambios y salir"{}} << std::endl;       }
+\DoxyCodeLine{128         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{129             std::cout << \textcolor{stringliteral}{"{}Seleccione una opción:"{}} << std::endl; }
+\DoxyCodeLine{130             std::cin >> option;}
+\DoxyCodeLine{131             \textcolor{keywordflow}{if} (std::cin.fail()) \{}
+\DoxyCodeLine{132                 \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Debe ingresar un número."{}});}
+\DoxyCodeLine{133             \}}
+\DoxyCodeLine{134             \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{135                 \textcolor{keywordflow}{case} 1: \{}
+\DoxyCodeLine{136                     \textcolor{comment}{//Muestra todos los usuarios en la base de datos}}
+\DoxyCodeLine{137                     std::cout << \textcolor{stringliteral}{"{}Usuarios en la base de datos:"{}} << std::endl;}
+\DoxyCodeLine{138                     db.\mbox{\hyperlink{classDBUser_ab2f0603805560b479b4f0ee3cc3b4250}{displayUsers}}();}
+\DoxyCodeLine{139                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{140                 \}       }
+\DoxyCodeLine{141                 \textcolor{keywordflow}{case} 2: \{}
+\DoxyCodeLine{142                     \textcolor{comment}{//Crea un nuevo usuario y lo añade a la lista}}
+\DoxyCodeLine{143                     std::string newId, newNif;}
+\DoxyCodeLine{144                     std::cout << \textcolor{stringliteral}{"{}Introduzca el ID del nuevo usuario: "{}};}
+\DoxyCodeLine{145                     std::cin >> newId;}
+\DoxyCodeLine{146                     std::cout << \textcolor{stringliteral}{"{}Introduzca el NIF del nuevo usuario: "{}};}
+\DoxyCodeLine{147                     std::cin >> newNif;}
+\DoxyCodeLine{148                     \mbox{\hyperlink{classUser}{User}}* newUser = \textcolor{keyword}{new} \mbox{\hyperlink{classUser}{User}}(newId, newNif);}
+\DoxyCodeLine{149                     db.\mbox{\hyperlink{classDBUser_a79ae2fe5268cae3d27c2c55551331a2b}{addUser}}(newUser);}
+\DoxyCodeLine{150                     std::cout << \textcolor{stringliteral}{"{}Usuario añadido correctamente."{}} << std::endl;}
+\DoxyCodeLine{151                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{152                 \}}
+\DoxyCodeLine{153                 \textcolor{keywordflow}{case} 3: \{}
+\DoxyCodeLine{154                     \textcolor{comment}{//Pide un id y elimina al user correspondiente}}
+\DoxyCodeLine{155                     std::string IdToRemove;}
+\DoxyCodeLine{156                     std::cout << \textcolor{stringliteral}{"{}Introduzca el ID del usuario a eliminar: "{}};}
+\DoxyCodeLine{157                     std::cin >> IdToRemove;}
+\DoxyCodeLine{158                     \mbox{\hyperlink{classUser}{User}}* UserToRemove = db.\mbox{\hyperlink{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}{findUser}}(IdToRemove);}
+\DoxyCodeLine{159                     \textcolor{keywordflow}{if} (UserToRemove != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{160                         db.\mbox{\hyperlink{classDBUser_a726571e85d958ec18abac59e9fe32297}{removeUser}}(UserToRemove);}
+\DoxyCodeLine{161                         std::cout << \textcolor{stringliteral}{"{}Usuario eliminado correctamente."{}} << std::endl;}
+\DoxyCodeLine{162                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{163                         std::cout << \textcolor{stringliteral}{"{}No se ha encontrado ningún usuario con tal identificador."{}} << std::endl;}
+\DoxyCodeLine{164                     \}}
+\DoxyCodeLine{165                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{166                 \}}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{case} 4: \{}
+\DoxyCodeLine{168                     \textcolor{comment}{//Permite editar el NIF de un usuario}}
+\DoxyCodeLine{169                     std::string IdToEdit, newNif;}
+\DoxyCodeLine{170                     std::cout << \textcolor{stringliteral}{"{}Introduzca el ID del usuario a editar: "{}};}
+\DoxyCodeLine{171                     std::cin >> IdToEdit;}
+\DoxyCodeLine{172                     \mbox{\hyperlink{classUser}{User}}* UserToEdit = db.\mbox{\hyperlink{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}{findUser}}(IdToEdit);}
+\DoxyCodeLine{173                     \textcolor{keywordflow}{if} (UserToEdit != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{174                         std::cout << \textcolor{stringliteral}{"{}Introduzca el nuevo NIF del usuario: "{}};}
+\DoxyCodeLine{175                         std::cin >> newNif;}
+\DoxyCodeLine{176                         db.\mbox{\hyperlink{classDBUser_ac0d39426ba387de6ef6c5f474b825f5d}{editUser}}(UserToEdit, newNif);}
+\DoxyCodeLine{177                         std::cout << \textcolor{stringliteral}{"{}Usuario editado correctamente."{}} << std::endl;}
+\DoxyCodeLine{178                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{179                         std::cout << \textcolor{stringliteral}{"{}No se ha encontrado ningún usuario con tal identificador."{}} << std::endl;}
+\DoxyCodeLine{180                     \}}
+\DoxyCodeLine{181                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{182                     \}        }
+\DoxyCodeLine{183                 \textcolor{keywordflow}{case} 5: \{}
+\DoxyCodeLine{184                     std::cout << \textcolor{stringliteral}{"{}Guardando cambios y saliendo"{}} << std::endl;}
+\DoxyCodeLine{185                     \textcolor{comment}{// Guarda los usuarios en users.dat}}
+\DoxyCodeLine{186                     db.\mbox{\hyperlink{classDBUser_a1fe8a4b6e1657d1a2ba076edde6f7110}{saveUsers}}();}
+\DoxyCodeLine{187                     exit = \textcolor{keyword}{true};}
+\DoxyCodeLine{188                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{189                 \}}
+\DoxyCodeLine{190             \}}
+\DoxyCodeLine{191         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::invalid\_argument\& e)\{}
+\DoxyCodeLine{192             std::cout << \textcolor{stringliteral}{"{}Error de argumento: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{193             \textcolor{comment}{//Restablecer el estado de error}}
+\DoxyCodeLine{194             std::cin.clear();}
+\DoxyCodeLine{195             std::cin.ignore();}
+\DoxyCodeLine{196         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::ios\_base::failure\& e) \{}
+\DoxyCodeLine{197             std::cout << \textcolor{stringliteral}{"{}Error de lectura: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{198             \textcolor{comment}{//Restablecer el estado de error}}
+\DoxyCodeLine{199             std::cin.clear();          }
+\DoxyCodeLine{200             std::cin.ignore();}
+\DoxyCodeLine{201         \}}
+\DoxyCodeLine{202     \}}
+\DoxyCodeLine{203 \}}
+
+\end{DoxyCode}
+
+
+References DBUser\+::add\+User(), DBUser\+::display\+Users(), DBUser\+::edit\+User(), DBUser\+::find\+User(), DBUser\+::remove\+User(), and DBUser\+::save\+Users().
+
+
+
+Referenced by display\+Options().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDashboard_aafdaa350902eb502afe9c669ed75a0d8}\label{classDashboard_aafdaa350902eb502afe9c669ed75a0d8}} 
+\index{Dashboard@{Dashboard}!displayOptions@{displayOptions}}
+\index{displayOptions@{displayOptions}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{displayOptions()}{displayOptions()}}
+{\footnotesize\ttfamily void Dashboard\+::display\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDBUser}{DBUser}} \&}]{db,  }\item[{\mbox{\hyperlink{classUser}{User}} $\ast$}]{current\+User }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                                        \{}
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} option;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}Opciones del sistema:"{}} << std::endl;}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classAdmin}{Admin}}*\textcolor{keyword}{>}(currentUser) != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{67             std::cout << \textcolor{stringliteral}{"{}1. Mostrar opciones de edición de usuarios (Admin)"{}} << std::endl;}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69         std::cout << \textcolor{stringliteral}{"{}2. Mostrar sensores"{}} << std::endl;}
+\DoxyCodeLine{70         std::cout << \textcolor{stringliteral}{"{}3. Salir"{}} << std::endl; }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{73             std::cout << \textcolor{stringliteral}{"{}Introduzca una opción:"{}} << std::endl;}
+\DoxyCodeLine{74             std::cin >> option;}
+\DoxyCodeLine{75             \textcolor{keywordflow}{if} (std::cin.fail()) \{}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Debe ingresar un número."{}});}
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78             \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{79                 \textcolor{keywordflow}{case} 1: \{}
+\DoxyCodeLine{80                     \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classAdmin}{Admin}}*\textcolor{keyword}{>}(currentUser) != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{81                         \mbox{\hyperlink{classDashboard_ae3b3c35e0763b2bd55c91b25ccd25dac}{displayEditUsers}}(db);}
+\DoxyCodeLine{82                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{83                         std::cout << \textcolor{stringliteral}{"{}Opción no válida para usuario normal."{}} << std::endl;}
+\DoxyCodeLine{84                     \}}
+\DoxyCodeLine{85                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{86                 \}}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{case} 2: \{}
+\DoxyCodeLine{88                     \mbox{\hyperlink{classDashboard_a900d830c8c1ba884931dcb53b935cd52}{displaySensors}}();}
+\DoxyCodeLine{89                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{90                 \}}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{case} 3: \{}
+\DoxyCodeLine{92                     std::cout << \textcolor{stringliteral}{"{}Saliendo del sistema"{}} << std::endl;}
+\DoxyCodeLine{93                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{94                 \}}
+\DoxyCodeLine{95                 \textcolor{keywordflow}{default}: \{}
+\DoxyCodeLine{96                     std::cout << \textcolor{stringliteral}{"{}Opción no válida."{}} << std::endl;}
+\DoxyCodeLine{97                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{98                 \}}
+\DoxyCodeLine{99             \}}
+\DoxyCodeLine{100         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::invalid\_argument\& e) \{}
+\DoxyCodeLine{101             std::cout << \textcolor{stringliteral}{"{}Error de argumento: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{102             \textcolor{comment}{// Restablece el estado de error}}
+\DoxyCodeLine{103             std::cin.clear();}
+\DoxyCodeLine{104             std::cin.ignore();}
+\DoxyCodeLine{105         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::ios\_base::failure\& e) \{}
+\DoxyCodeLine{106             std::cout << \textcolor{stringliteral}{"{}Error de lectura: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{107             \textcolor{comment}{// Restablece el estado de error}}
+\DoxyCodeLine{108             std::cin.clear();          }
+\DoxyCodeLine{109             std::cin.ignore();}
+\DoxyCodeLine{110         \} }
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+
+
+References display\+Edit\+Users(), and display\+Sensors().
+
+
+
+Referenced by login().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_aafdaa350902eb502afe9c669ed75a0d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_aafdaa350902eb502afe9c669ed75a0d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDashboard_a900d830c8c1ba884931dcb53b935cd52}\label{classDashboard_a900d830c8c1ba884931dcb53b935cd52}} 
+\index{Dashboard@{Dashboard}!displaySensors@{displaySensors}}
+\index{displaySensors@{displaySensors}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{displaySensors()}{displaySensors()}}
+{\footnotesize\ttfamily void Dashboard\+::display\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{206                           \{}
+\DoxyCodeLine{207     }
+\DoxyCodeLine{208     \textcolor{comment}{// Muestra la lista de sensores disponibles}}
+\DoxyCodeLine{209     std::cout << \textcolor{stringliteral}{"{}Seleccione el sensor del cual quiere ver los datos (o escriba 'salir' para salir):"{}} << std::endl;}
+\DoxyCodeLine{210     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}.size(); ++i) \{}
+\DoxyCodeLine{211         std::cout << i + 1 << \textcolor{stringliteral}{"{}. "{}} << \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}[i]-\/>getName() << std::endl;}
+\DoxyCodeLine{212     \}}
+\DoxyCodeLine{213     \textcolor{comment}{// Lee la selección del usuario}}
+\DoxyCodeLine{214     std::string option;}
+\DoxyCodeLine{215     std::cout << \textcolor{stringliteral}{"{}Seleccione una opción:"{}} << std::endl;}
+\DoxyCodeLine{216     std::cin >> option;}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218     \textcolor{keywordflow}{while} (option != \textcolor{stringliteral}{"{}salir"{}}) \{}
+\DoxyCodeLine{219         \textcolor{keywordtype}{size\_t} index = std::stoul(option);}
+\DoxyCodeLine{220         \textcolor{keywordflow}{if} (index >= 1 \&\& index <= \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}.size()) \{}
+\DoxyCodeLine{221             \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}[index -\/ 1]-\/>getDate();}
+\DoxyCodeLine{222             \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}[index -\/ 1]-\/>printDate();}
+\DoxyCodeLine{223         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{224             std::cout << \textcolor{stringliteral}{"{}Opción inválida"{}} << std::endl;}
+\DoxyCodeLine{225         \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         std::cout << \textcolor{stringliteral}{"{}Seleccione el sensor del que quiere informacion (o escriba 'salir' para salir):"{}} << std::endl;}
+\DoxyCodeLine{228         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}.size(); ++i) \{}
+\DoxyCodeLine{229             std::cout << i + 1 << \textcolor{stringliteral}{"{}. "{}} << \mbox{\hyperlink{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}{sensors\_}}[i]-\/>getName() << std::endl;}
+\DoxyCodeLine{230         \}}
+\DoxyCodeLine{231         std::cout << \textcolor{stringliteral}{"{}Seleccione una opción:"{}} << std::endl;}
+\DoxyCodeLine{232         std::cin >> option;}
+\DoxyCodeLine{233     \}}
+\DoxyCodeLine{234 \}}
+
+\end{DoxyCode}
+
+
+References sensors\+\_\+.
+
+
+
+Referenced by display\+Options().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_a900d830c8c1ba884931dcb53b935cd52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDashboard_ac3ca1a75288b06929db55f223a57dc67}\label{classDashboard_ac3ca1a75288b06929db55f223a57dc67}} 
+\index{Dashboard@{Dashboard}!initializeSensors@{initializeSensors}}
+\index{initializeSensors@{initializeSensors}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{initializeSensors()}{initializeSensors()}}
+{\footnotesize\ttfamily void Dashboard\+::initialize\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                   \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{// Crea los objetos de los diferentes sensores}}
+\DoxyCodeLine{20     std::unique\_ptr<AirQ> airq(\textcolor{keyword}{new} \mbox{\hyperlink{classAirQ}{AirQ}});}
+\DoxyCodeLine{21     std::unique\_ptr<CamRGB> camrgb(\textcolor{keyword}{new} \mbox{\hyperlink{classCamRGB}{CamRGB}});}
+\DoxyCodeLine{22     std::unique\_ptr<CamTherm> camtherm(\textcolor{keyword}{new} \mbox{\hyperlink{classCamTherm}{CamTherm}});}
+\DoxyCodeLine{23     std::unique\_ptr<Temp> temp(\textcolor{keyword}{new} \mbox{\hyperlink{classTemp}{Temp}});}
+\DoxyCodeLine{24     std::unique\_ptr<Moisture> moisture(\textcolor{keyword}{new} \mbox{\hyperlink{classMoisture}{Moisture}});}
+\DoxyCodeLine{25     std::unique\_ptr<Light> light(\textcolor{keyword}{new} \mbox{\hyperlink{classLight}{Light}});}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Agrega los sensores a la lista de sensores del desplegable}}
+\DoxyCodeLine{28     \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{addSensor}}(airq.get());}
+\DoxyCodeLine{29     \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{addSensor}}(camrgb.get());}
+\DoxyCodeLine{30     \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{addSensor}}(camtherm.get());}
+\DoxyCodeLine{31     \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{addSensor}}(temp.get());}
+\DoxyCodeLine{32     \mbox{\hyperlink{classDashboard_a9433ba134a284f605bd66b0267937e24}{addSensor}}(light.get());}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+
+
+References add\+Sensor().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_ac3ca1a75288b06929db55f223a57dc67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classDashboard_ac3ca1a75288b06929db55f223a57dc67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDashboard_a5009fc728930fab32704fef909c94215}\label{classDashboard_a5009fc728930fab32704fef909c94215}} 
+\index{Dashboard@{Dashboard}!login@{login}}
+\index{login@{login}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void Dashboard\+::login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDBUser}{DBUser}} \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file Dashboard.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                            \{}
+\DoxyCodeLine{43     \textcolor{comment}{//Pide al usuario que se autentique}}
+\DoxyCodeLine{44     db.\mbox{\hyperlink{classDBUser_a132ce028989581dbe5b814dd2c579058}{loadUsers}}();}
+\DoxyCodeLine{45     std::string id, nif;}
+\DoxyCodeLine{46     std::cout << \textcolor{stringliteral}{"{}Introduzca su identificador: "{}};}
+\DoxyCodeLine{47     std::cin >> id;}
+\DoxyCodeLine{48     std::cout << \textcolor{stringliteral}{"{}Introduzca su NIF: "{}};}
+\DoxyCodeLine{49     std::cin >> nif;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \mbox{\hyperlink{classUser}{User}}* currentUser = db.\mbox{\hyperlink{classDBUser_a3f5df9934ddad8a4f32177a9ce7bdf92}{findUser}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{52     \textcolor{keywordflow}{if} (currentUser != \textcolor{keyword}{nullptr} \&\& currentUser-\/>\mbox{\hyperlink{classUser_a45b909a4f4e6b56cb00a5c6dae251a9a}{getNif}}() == nif) \{}
+\DoxyCodeLine{53         std::cout << \textcolor{stringliteral}{"{}Bienvenido, usuario con identificador: "{}} << currentUser-\/>\mbox{\hyperlink{classUser_aa36207a7cead4fda23017d44c5ad4ad3}{getId}}() << std::endl;}
+\DoxyCodeLine{54         \mbox{\hyperlink{classDashboard_aafdaa350902eb502afe9c669ed75a0d8}{displayOptions}}(db, currentUser);}
+\DoxyCodeLine{55     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{56         std::cout << \textcolor{stringliteral}{"{}ID o NIF incorrectos."{}} << std::endl;}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+References display\+Options(), DBUser\+::find\+User(), User\+::get\+Id(), User\+::get\+Nif(), and DBUser\+::load\+Users().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDashboard_a5009fc728930fab32704fef909c94215_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classDashboard_a5009fc728930fab32704fef909c94215_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}\label{classDashboard_a56dab5f32961a08cc35e4e70a038e41b}} 
+\index{Dashboard@{Dashboard}!sensors\_@{sensors\_}}
+\index{sensors\_@{sensors\_}!Dashboard@{Dashboard}}
+\doxysubsubsection{\texorpdfstring{sensors\_}{sensors\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classSensor}{Sensor}}$\ast$$>$ Dashboard\+::sensors\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file Dashboard.\+h.
+
+
+
+Referenced by add\+Sensor(), and display\+Sensors().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Dashboard_8h}{Dashboard.\+h}}\item 
+\mbox{\hyperlink{Dashboard_8cpp}{Dashboard.\+cpp}}\end{DoxyCompactItemize}

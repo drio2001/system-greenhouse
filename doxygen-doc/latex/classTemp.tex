@@ -1,0 +1,145 @@
+\hypertarget{classTemp}{}\doxysection{Temp Class Reference}
+\label{classTemp}\index{Temp@{Temp}}
+
+
+{\ttfamily \#include $<$Temp.\+h$>$}
+
+
+
+Inheritance diagram for Temp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classTemp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Temp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classTemp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTemp_a5cc217fe4cb7beb380d372afe20faed5}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classTemp_a558419f50c591a4d0fa208cb77a614d4}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classTemp_a0dc8777549e6e5024eb5d68076ca8257}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTemp_a4614738cf25dbd2698d95d543e435370}{date\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Temp.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTemp_a5cc217fe4cb7beb380d372afe20faed5}\label{classTemp_a5cc217fe4cb7beb380d372afe20faed5}} 
+\index{Temp@{Temp}!getDate@{getDate}}
+\index{getDate@{getDate}!Temp@{Temp}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Temp\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 8 of file Temp.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10   \textcolor{comment}{// Devuelve el atributo con los datos (número aleatorio entre 0 y 100) del sensor}}
+\DoxyCodeLine{11   \mbox{\hyperlink{classTemp_a4614738cf25dbd2698d95d543e435370}{date\_}} = rand() \% 101;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classTemp_a0dc8777549e6e5024eb5d68076ca8257}\label{classTemp_a0dc8777549e6e5024eb5d68076ca8257}} 
+\index{Temp@{Temp}!getName@{getName}}
+\index{getName@{getName}!Temp@{Temp}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Temp\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 21 of file Temp.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Sensor de temperatura:"{}};}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTemp_a558419f50c591a4d0fa208cb77a614d4}\label{classTemp_a558419f50c591a4d0fa208cb77a614d4}} 
+\index{Temp@{Temp}!printDate@{printDate}}
+\index{printDate@{printDate}!Temp@{Temp}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Temp\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 15 of file Temp.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17   std::cout << \textcolor{stringliteral}{"{}Datos de la temperatura: "{}} << \mbox{\hyperlink{classTemp_a4614738cf25dbd2698d95d543e435370}{date\_}} << std::endl;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTemp_a4614738cf25dbd2698d95d543e435370}\label{classTemp_a4614738cf25dbd2698d95d543e435370}} 
+\index{Temp@{Temp}!date\_@{date\_}}
+\index{date\_@{date\_}!Temp@{Temp}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Temp\+::date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Temp.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Temp_8h}{Temp.\+h}}\item 
+\mbox{\hyperlink{Temp_8cpp}{Temp.\+cpp}}\end{DoxyCompactItemize}

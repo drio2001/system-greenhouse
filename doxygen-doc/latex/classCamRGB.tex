@@ -1,0 +1,156 @@
+\hypertarget{classCamRGB}{}\doxysection{Cam\+RGB Class Reference}
+\label{classCamRGB}\index{CamRGB@{CamRGB}}
+
+
+{\ttfamily \#include $<$Cam\+RGB.\+h$>$}
+
+
+
+Inheritance diagram for Cam\+RGB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classCamRGB__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cam\+RGB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classCamRGB__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCamRGB_a77a4d4e0a43f80871bde397361bcf766}{get\+Date}} () override
+\item 
+void \mbox{\hyperlink{classCamRGB_a9d0c4c55c5480389962ffdcd1323e1a6}{print\+Date}} () const override
+\item 
+std\+::string \mbox{\hyperlink{classCamRGB_ae1ec92adf8dbc8ac2426ab1725bcc05c}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCamRGB_a8cb20dda1af6dab5fff376fcdef7fe59}{date\+\_\+}} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Cam\+RGB.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCamRGB_a77a4d4e0a43f80871bde397361bcf766}\label{classCamRGB_a77a4d4e0a43f80871bde397361bcf766}} 
+\index{CamRGB@{CamRGB}!getDate@{getDate}}
+\index{getDate@{getDate}!CamRGB@{CamRGB}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily void Cam\+RGB\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_ab8f31d54440151ec8d8302be251fb564}{Sensor}}.
+
+
+
+Definition at line 8 of file Cam\+RGB.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10   \textcolor{comment}{// Devuelve el atributo con los datos (matriz 3x3 de números aleatorios)}}
+\DoxyCodeLine{11   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; ++i) \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 3; ++j) \{}
+\DoxyCodeLine{13       \mbox{\hyperlink{classCamRGB_a8cb20dda1af6dab5fff376fcdef7fe59}{date\_}}[i][j] = rand() \% 100;}
+\DoxyCodeLine{14     \}}
+\DoxyCodeLine{15   \}}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+\mbox{\Hypertarget{classCamRGB_ae1ec92adf8dbc8ac2426ab1725bcc05c}\label{classCamRGB_ae1ec92adf8dbc8ac2426ab1725bcc05c}} 
+\index{CamRGB@{CamRGB}!getName@{getName}}
+\index{getName@{getName}!CamRGB@{CamRGB}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Cam\+RGB\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a285f64b5f67d96a6f4949eb252bc8ceb}{Sensor}}.
+
+
+
+Definition at line 32 of file Cam\+RGB.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Cámara RGB"{}};}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCamRGB_a9d0c4c55c5480389962ffdcd1323e1a6}\label{classCamRGB_a9d0c4c55c5480389962ffdcd1323e1a6}} 
+\index{CamRGB@{CamRGB}!printDate@{printDate}}
+\index{printDate@{printDate}!CamRGB@{CamRGB}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Cam\+RGB\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSensor_a669fe6532e962d45680ef60f8b3eaf32}{Sensor}}.
+
+
+
+Definition at line 19 of file Cam\+RGB.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21   \textcolor{comment}{// Imprime el atributo con los datos del sensor}}
+\DoxyCodeLine{22   std::cout << \textcolor{stringliteral}{"{}Datos cámara RGB:"{}} << std::endl;}
+\DoxyCodeLine{23   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; ++i) \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 3; ++j) \{}
+\DoxyCodeLine{25       std::cout << \mbox{\hyperlink{classCamRGB_a8cb20dda1af6dab5fff376fcdef7fe59}{date\_}}[i][j] << \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     std::cout << std::endl;}
+\DoxyCodeLine{28   \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+References date\+\_\+.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCamRGB_a8cb20dda1af6dab5fff376fcdef7fe59}\label{classCamRGB_a8cb20dda1af6dab5fff376fcdef7fe59}} 
+\index{CamRGB@{CamRGB}!date\_@{date\_}}
+\index{date\_@{date\_}!CamRGB@{CamRGB}}
+\doxysubsubsection{\texorpdfstring{date\_}{date\_}}
+{\footnotesize\ttfamily int Cam\+RGB\+::date\+\_\+\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Cam\+RGB.\+h.
+
+
+
+Referenced by get\+Date(), and print\+Date().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{CamRGB_8h}{Cam\+RGB.\+h}}\item 
+\mbox{\hyperlink{CamRGB_8cpp}{Cam\+RGB.\+cpp}}\end{DoxyCompactItemize}
